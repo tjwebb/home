@@ -136,7 +136,6 @@ au BufNewFile,BufRead *.cbl         set filetype=cobol
 au BufNewFile,BufRead *.cpy         set filetype=cobol
 au BufNewFile,BufRead *.cobol       set filetype=cobol
 
-
 " show cursor position
 set ruler
 set rulerformat=%50(%c%V\ %p%%%)
@@ -145,6 +144,11 @@ set rulerformat=%50(%c%V\ %p%%%)
 "imap :fix <ESC>1G=Ga
 
 " cobol
+au BufNewFile,BufRead *.cob set filetype=cobol
+au BufNewFile,BufRead *.cbl set filetype=cobol
+au BufNewFile,BufRead *.cpy set filetype=cobol
+au BufNewFile,BufRead *.cobol set filetype=cobol
+
 autocmd FileType cobol set sw=4 sts=4 et sta tw=72
 let g:cobol_syntax_checker_cobc_compiler_option = '-F'
 let g:cobol_syntax_checker_check_on_read = 0
