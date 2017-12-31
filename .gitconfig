@@ -1,0 +1,6 @@
+[user]
+	email = me@traviswebb.com
+[push]
+	default = simple
+[core]
+	excludesfile = /mnt/c/home/tjwebb/.gitignore
