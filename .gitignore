@@ -2,12 +2,14 @@
 .*.swp
 *.log
 *~
+*.tmp
 
 .ssh/
 .pgpass
 .gnu*/
 .config
 .cache
+.sudo*
 
 .*_history
 .*conf

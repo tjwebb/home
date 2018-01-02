@@ -14,9 +14,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['tslint', 'tsc']
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_error_symbol = '!'
+let g:syntastic_style_error_symbol = '?'
+let g:syntastic_warning_symbol = '?'
 
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
@@ -33,14 +33,14 @@ set modeline
 
 " basics
 syntax on
-let g:gruvbox_termcolors=16
 let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_termcolors = 16
 colorscheme gruvbox
 set nocompatible
 set nonumber
 set ts=2
 set sw=2
-"set smartindent
+set smartindent
 set wrap!
 set hlsearch
 set expandtab
@@ -104,7 +104,8 @@ au BufEnter makefile call MakeFileIndent()
 au BufRead,BufNewFile *bash* let g:is_bash=1
 
 " javascript
-"au BufNewFile,BufRead *.json   	set filetype=javascript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 
 " erlang stuff
 au BufNewFile,BufRead *.esp         set filetype=html
